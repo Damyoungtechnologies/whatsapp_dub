@@ -1,0 +1,258 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Aug 18, 2023 at 12:24 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 7.2.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `whatsapp`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `message`
+--
+
+CREATE TABLE `message` (
+  `msg_id` int(11) NOT NULL,
+  `message` varchar(5000) NOT NULL,
+  `sender` varchar(1024) NOT NULL,
+  `receiver` varchar(1024) NOT NULL,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `message`
+--
+
+INSERT INTO `message` (`msg_id`, `message`, `sender`, `receiver`, `date_created`) VALUES
+(1, 'hi! philip', '1', '3', '2022-09-28 11:12:02'),
+(2, 'how was your night?\r\n', '1', '3', '2022-09-28 11:12:43'),
+(3, 'Hello Mr Paul', '2', '1', '2022-09-28 11:16:22'),
+(4, 'How is it going with you and how is your family?\r\n', '2', '1', '2022-09-28 11:16:54'),
+(5, 'HI paul', '2', '1', '2022-09-28 11:32:18'),
+(6, 'Titus, how is he?', '2', '1', '2022-09-28 11:33:14'),
+(7, 'justin is not a good guy', '2', '1', '2022-09-28 11:35:23'),
+(8, 'This is good', '2', '1', '2022-09-28 11:37:57'),
+(9, 'calculate this', '2', '1', '2022-09-28 11:43:16'),
+(10, 'the scroll is now working', '2', '1', '2022-09-28 11:51:58'),
+(11, 'how are you Timothy?', '5', '2', '2022-09-28 11:56:09'),
+(12, 'hi\r\n', '2', '5', '2022-09-28 12:10:43'),
+(13, 'how is the university life going', '2', '5', '2022-09-28 12:11:23'),
+(14, 'how is it that i am not getting you very well', '5', '2', '2022-09-28 12:11:51'),
+(15, 'Hello Tim', '2', '5', '2022-09-28 12:14:28'),
+(16, 'Hi Don', '5', '2', '2022-09-28 12:14:38'),
+(17, 'you better respond this time around', '2', '5', '2022-09-28 12:19:18'),
+(18, 'you no dey hear word', '5', '2', '2022-09-28 12:19:55'),
+(19, 'kai, do normal now', '2', '5', '2022-09-28 12:20:30'),
+(20, 'omo.. this is nice', '5', '2', '2022-09-28 12:20:52'),
+(21, 'how are you doing?', '2', '5', '2022-09-28 12:21:20'),
+(22, 'i am timothy', '2', '5', '2022-09-28 12:21:58'),
+(23, 'i ma donald', '5', '2', '2022-09-28 12:22:05'),
+(24, 'nawa for php o', '2', '5', '2022-09-28 12:27:25'),
+(25, 'it is good to know php', '9', '5', '2022-09-28 12:33:40'),
+(26, 'it is good to know php', '9', '5', '2022-09-28 12:38:37'),
+(27, 'it is good to know php', '9', '5', '2022-09-28 12:38:52'),
+(28, 'hi Tim', '9', '2', '2022-09-28 12:43:24'),
+(29, 'hi okportech', '2', '9', '2022-09-28 12:43:39'),
+(30, 'did you hear me?', '9', '5', '2022-09-28 12:44:53'),
+(31, 'yeah, i did hear you', '5', '9', '2022-09-28 12:45:03'),
+(32, 'hi', '9', '12', '2022-09-28 12:46:38'),
+(33, 'Hi', '12', '1', '2022-09-28 13:15:04'),
+(34, 'How are you doing sir ', '1', '12', '2022-09-28 13:15:13'),
+(35, 'Hi', '12', '1', '2022-09-28 13:15:21'),
+(36, 'What of Christian ', '12', '1', '2022-09-28 13:15:42'),
+(37, 'Your boy dey loyal o', '1', '12', '2022-09-28 13:15:43'),
+(38, 'E dey', '1', '12', '2022-09-28 13:15:52'),
+(39, 'Ike gwuru', '1', '16', '2022-09-28 13:16:44'),
+(40, 'Hello sir\r\nHow are you doing sir ðŸž', '16', '12', '2022-09-28 13:16:49'),
+(41, 'Congratulations bro', '15', '1', '2022-09-28 13:17:03'),
+(42, 'Congratulations bro', '15', '1', '2022-09-28 13:17:03'),
+(43, 'Congratulations bro', '15', '1', '2022-09-28 13:17:03'),
+(44, 'Congratulations bro', '15', '1', '2022-09-28 13:17:04'),
+(45, 'Congratulations bro', '15', '1', '2022-09-28 13:17:04'),
+(46, 'Hi', '12', '15', '2022-09-28 13:17:11'),
+(47, 'Thank you sir ', '1', '15', '2022-09-28 13:17:24'),
+(48, 'I am fine', '12', '16', '2022-09-28 13:17:59'),
+(49, 'Hi', '18', '17', '2022-09-28 16:44:03'),
+(50, 'Hi', '18', '17', '2022-09-28 16:44:06'),
+(51, 'Hi', '18', '17', '2022-09-28 16:44:06'),
+(52, 'Hi', '18', '17', '2022-09-28 16:44:09'),
+(53, 'Hello', '18', '17', '2022-09-28 16:45:09'),
+(54, 'Hello sir', '17', '18', '2022-09-28 16:45:45'),
+(55, 'Hi', '18', '17', '2022-09-28 16:46:21'),
+(56, 'How are you doing', '18', '17', '2022-09-28 16:46:39'),
+(57, 'I can see you', '17', '18', '2022-09-28 16:46:42'),
+(58, 'Did you get me?', '17', '18', '2022-09-28 16:46:53'),
+(59, 'Did you get me?', '17', '18', '2022-09-28 16:46:56'),
+(60, 'I am fine sir', '17', '18', '2022-09-28 16:47:45'),
+(61, 'Thank you for testing it', '17', '18', '2022-09-28 16:50:13'),
+(62, 'Thank you for testing it', '17', '18', '2022-09-28 16:50:15'),
+(63, 'you are good', '5', '9', '2022-09-28 18:51:18'),
+(64, 'HiiiiiðŸ˜ðŸ˜', '20', '17', '2022-09-29 10:20:55'),
+(65, 'Nice appðŸ™ŒðŸ»', '20', '17', '2022-09-29 10:21:14'),
+(66, 'Hello patra', '', '20', '2022-09-29 10:22:15'),
+(67, 'Did you get it ', '', '20', '2022-09-29 10:23:36'),
+(68, 'Holla ', '', '20', '2022-09-29 10:30:29'),
+(69, '.', '', '20', '2022-09-29 10:30:43'),
+(70, 'Okay ', '', '20', '2022-09-29 10:31:48'),
+(71, 'hello', '17', '20', '2022-09-29 12:57:46'),
+(72, 'hi', '17', '20', '2022-09-29 13:12:10'),
+(73, 'thank you for trying it out', '17', '20', '2022-09-29 13:56:14'),
+(74, 'hello', '21', '2', '2022-09-30 18:24:30'),
+(75, 'you are good\r\n', '21', '2', '2022-10-03 00:45:15'),
+(76, 'hello sam', '2', '21', '2022-10-03 02:25:42'),
+(77, 'hello how are you', '2', '21', '2022-10-03 02:27:43'),
+(78, 'hello', '2', '21', '2022-10-03 02:30:32'),
+(79, 'hi', '2', '21', '2022-10-03 02:32:02'),
+(80, 'hi', '2', '21', '2022-10-03 02:34:55'),
+(81, 'hello', '21', '2', '2022-10-03 02:53:45'),
+(82, 'how are you doing?', '2', '21', '2022-10-03 02:53:55'),
+(83, 'Hello ', '23', '9', '2022-10-03 13:36:42'),
+(84, 'HI\r\n', '22', '23', '2022-10-03 13:37:29'),
+(85, 'Hello ', '23', '22', '2022-10-03 13:39:08'),
+(86, 'I AM FINE\r\n', '22', '23', '2022-10-03 13:39:21'),
+(87, 'How is work?', '23', '22', '2022-10-03 13:39:41'),
+(88, 'Hello ', '23', '22', '2022-10-03 13:40:36'),
+(89, 'Hi', '23', '20', '2022-10-03 13:41:29'),
+(90, 'Hi', '23', '15', '2022-10-03 13:42:03'),
+(91, 'hello are you doingðŸ˜š', '21', '2', '2022-10-04 18:50:59'),
+(92, 'hello', '21', '2', '2022-10-04 19:19:12'),
+(93, 'hi don', '21', '5', '2022-10-04 19:39:52'),
+(94, 'hi', '21', '25', '2022-10-06 14:43:11'),
+(95, 'how are you doing?', '25', '21', '2022-10-06 14:43:20'),
+(96, 'hi Graphics man', '25', '21', '2022-10-06 14:56:01'),
+(97, 'Hello Daniella', '21', '25', '2022-10-06 14:56:11'),
+(98, 'how are you doingðŸ¤—', '21', '25', '2022-10-06 14:56:31'),
+(99, 'i am fineðŸ¥°', '25', '21', '2022-10-06 14:56:46'),
+(100, 'hi \r\n', '21', '6', '2022-10-06 15:42:24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `registration`
+--
+
+CREATE TABLE `registration` (
+  `id` int(11) NOT NULL,
+  `country` varchar(1024) NOT NULL,
+  `phone` varchar(1024) NOT NULL,
+  `verification_number` varchar(6) NOT NULL,
+  `name` varchar(1024) NOT NULL,
+  `photo` varchar(1024) NOT NULL,
+  `status` varchar(1024) NOT NULL,
+  `status_id` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `registration`
+--
+
+INSERT INTO `registration` (`id`, `country`, `phone`, `verification_number`, `name`, `photo`, `status`, `status_id`) VALUES
+(2, 'Nigeria', '+2348036925522', '', 'Timothy', 'church_background_3.jpg', 'offline', 1),
+(3, 'Nigeria', '+2347066293401', '', 'Philip', 'FB_IMG_1630192349130.jpg', 'offline', 1),
+(4, 'Nigeria', '+2348122792919', '', 'James', 'IMG_20210410_102635_779.jpg', 'offline', 1),
+(5, 'Nigeria', '+2347124802321', '', 'Donald', 'FB_IMG_1618436944051.jpg', 'offline', 1),
+(6, 'Nigeria', '+2347021299212', '', 'samantha', 'FB_IMG_1630192349130.jpg', 'offline', 1),
+(7, 'Nigeria', '+2348177928801', '', 'Luther', 'IMG_20200917_130740_163.jpg', 'offline', 1),
+(9, 'Congo', '+2349073091900', '', 'okportech', 'testing.jpg', 'offline', 1),
+(10, 'Burkinafaso', '+2229073001907', '', 'okportech junior', 'FB_IMG_1622198319230.jpg', 'offline', 1),
+(11, 'South Korea', '+2349973091900', '', 'jeremiah okpor', 'testing.jpg', 'offline', 1),
+(12, 'Switzerland', '+2348147113667', '', 'Okpor Emmanuel EMMANUEL', 'community helpers.PNG', 'Online', 1),
+(13, 'Burkinafaso', '+2348147113667', '981275', 'emmanuel okpor', 'FB_IMG_1622198319230.jpg', 'offline', 1),
+(14, 'Burkinafaso', '+2347066293401', '', 'mary anita', 'FB_IMG_1622835450946.jpg', 'offline', 1),
+(15, 'England', '+23408144349382', '', 'Jaykelly ', 'IMG_20181211_152954.jpg', 'offline', 1),
+(16, 'South Korea', '+2349044904921', '', 'Kwiin Estrr', 'IMG-20201208-WA0057.jpg', 'offline', 1),
+(18, 'Nigeria', '+2349064345314', '', 'Xcel', 'IMG_20220911_121215_177.jpg', 'offline', 1),
+(19, 'Nigeria', '+2348172468809', '', '', '', '', 0),
+(20, 'Nigeria', '+23408172468809', '', 'Patra', 'EFF5E85B-1C44-4282-9F49-8C09A4ED96B0.jpeg', 'Online', 1),
+(21, 'Nigeria', '+2348032077924', '', 'Damyoung Graphics', 'community helpers.PNG', 'Online', 1),
+(22, 'Nigeria', '+2348147113669', '', 'OKPORTECH DIGITAL MEDIA', 'Damyoung 1.png', 'Online', 1),
+(23, 'Nigeria', '+2348070855816', '', 'Sunny ', '16648040481119104777945735741172.jpg', 'Online', 1),
+(25, 'Nigeria', '+23408036925522', '', 'Daniella', '31e44e3b50954b1f839081a4b1195b62-removebg-preview.png', 'Online', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `welcome_page`
+--
+
+CREATE TABLE `welcome_page` (
+  `id` int(11) NOT NULL,
+  `first_heading` varchar(1024) NOT NULL,
+  `scan_code` varchar(1024) NOT NULL,
+  `privacy_policy` varchar(1024) NOT NULL,
+  `terms` varchar(1024) NOT NULL,
+  `facebook` varchar(1024) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `welcome_page`
+--
+
+INSERT INTO `welcome_page` (`id`, `first_heading`, `scan_code`, `privacy_policy`, `terms`, `facebook`) VALUES
+(1, 'Welcome to Young Chat', '', 'Read our Privacy Policy. Tap \"Agree and continue\" to accept the Terms of Service.', 'AGREE AND CONTINUE', 'FROM FACEBOOK');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`msg_id`);
+
+--
+-- Indexes for table `registration`
+--
+ALTER TABLE `registration`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `welcome_page`
+--
+ALTER TABLE `welcome_page`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `message`
+--
+ALTER TABLE `message`
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+
+--
+-- AUTO_INCREMENT for table `registration`
+--
+ALTER TABLE `registration`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT for table `welcome_page`
+--
+ALTER TABLE `welcome_page`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

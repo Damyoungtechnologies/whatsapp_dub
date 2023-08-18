@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript training</title>
+</head>
+<body>
+    
+     <h2>Javascript Booleans</h2>
+     <p>Display the value of (10 > 9):</p>
+     <p id="demo"></p>
+      <h2>Javascript new Date()</h2>
+      <p>Create a date using ISO notation:</p>
+      <p id="james"></p>
+
+
+
+      <h2>The getHours() Method</h2>
+      <p>getHours() returns the hour (from 0 to 23) of a date</p>
+      <p id="dam"></p>
+
+
+        <script>
+            document.getElementById("demo").innerHTML = (10 > 9);
+            var d = new Date("July 21, 1983 01:15:00");
+            let hrs = d.getHours();
+            document.getElementById("james").innerHTML = hrs;
+
+            const e = new Date();
+            var f = e.toLocaleDateString();
+            document.getElementById("dam").innerHTML = f;
+
+
+
+  
+        </script>
+        
+   
+
+    
+</body>
+</html>
